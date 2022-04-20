@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/TextEdit.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/baseplayer.gd" type="Script" id=2]
+
+[node name="Ciudad" type="Node2D"]
+
+[node name="EdificioCentral" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="PanelDatos" type="Panel" parent="."]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 1027.0
+margin_bottom = 68.0
+
+[node name="TextEdit" type="TextEdit" parent="PanelDatos"]
+margin_left = 21.0
+margin_top = 10.0
+margin_right = 154.0
+margin_bottom = 55.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "contaminacion
+0%"
+readonly = true
+script = ExtResource( 1 )
