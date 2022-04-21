@@ -1,16 +1,14 @@
 extends TextEdit
-
-
-var Datos
-var BasePlayer
+onready var datos  = get_node("/root/DatosMundo")
 func _init():
 	conectar()
 
 func conectar():	
 	
-	print(get_node("/root/Mundo"))
-	BasePlayer=$Ciudad
+	pass
+	
+	
 
 func _ready():
-	text ="hola"
+	text =  datos.dato
 	 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/menuDeInicio.gd" type="Script" id=1]
+[ext_resource path="res://sprites/boton Inicio.png" type="Texture" id=2]
+
+[node name="pantalla inicio" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ButtonInicio" type="Button" parent="."]
+margin_left = 378.0
+margin_top = 169.0
+margin_right = 591.0
+margin_bottom = 282.0
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[connection signal="button_up" from="ButtonInicio" to="." method="_on_ButtonInicio_button_up"]

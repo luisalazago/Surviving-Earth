@@ -7,8 +7,10 @@ var AguaMundo=200
 var ContaminacionAire=100
 var ContaminacionAgua=100
 #dato debug hola
-var dato="hola"
+var dato="holamundo"
 
+func mostrarDato():
+	emit_signal("mensaje",dato)
 
 func mostrarAguaContaminada():
 	return ContaminacionAgua

@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/TextEdit.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/baseplayer.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/DatosPlayer.gd" type="Script" id=2]
+[ext_resource path="res://sprites/icon.png" type="Texture" id=3]
 
 [node name="Ciudad" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="EdificioCentral" type="Node2D" parent="."]
+position = Vector2( 359, 259 )
 script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="EdificioCentral"]
+texture = ExtResource( 3 )
 
 [node name="PanelDatos" type="Panel" parent="."]
 margin_left = 2.0
