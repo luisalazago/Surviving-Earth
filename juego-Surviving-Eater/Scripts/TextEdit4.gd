@@ -7,5 +7,5 @@ func conectar():
 	pass
 
 func _ready():
-	text =  "Temperatura\n"
+	text =  datos.mostrarDato(4)
 	text += str(datos.mostrarTemperatura()) + "°C"

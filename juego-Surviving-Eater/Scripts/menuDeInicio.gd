@@ -16,3 +16,7 @@ func _on_ButtonInicio_button_up():
 
 func _on_ButtonSalir_button_up():
 	salirDelJuego()
+
+
+func _on_ButtonInicio2_button_up():
+	salirDelJuego()

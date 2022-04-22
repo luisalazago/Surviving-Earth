@@ -7,5 +7,5 @@ func conectar():
 	pass
 	
 func _ready():
-	text =  "Contaminacion Aire\n"
+	text =  datos.mostrarDato(2)
 	text += str(datos.mostrarAireContamiado()) + "%"

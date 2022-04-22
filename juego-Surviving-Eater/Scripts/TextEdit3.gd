@@ -7,5 +7,5 @@ func conectar():
 	pass
 	
 func _ready():
-	text =  "Petroleo\n"
+	text =  datos.mostrarDato(3)
 	text += str((datos.mostrarPetroleo() * 100) / 600) + "%"

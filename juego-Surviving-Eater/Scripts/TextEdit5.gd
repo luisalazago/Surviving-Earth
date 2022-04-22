@@ -7,5 +7,5 @@ func conectar():
 	pass
 
 func _ready():
-	text =  "Minerales\n"
+	text =  datos.mostrarDato(5)
 	text += str((datos.mostrarMinerales() * 100) / 500) + "%"

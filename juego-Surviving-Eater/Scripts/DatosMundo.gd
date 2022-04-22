@@ -10,11 +10,20 @@ var minerales = 500
 var ContaminacionAire = 0
 var ContaminacionAgua = 0
 #dato debug hola
-var dato="holamundo"
+#var dato="holamundo"
 
 # Mostrar Datos
-func mostrarDato():
-	emit_signal("mensaje",dato)
+func mostrarDato(r):
+	#emit_signal("mensaje",dato)
+	if(r == 1):
+		return "Contaminacion Agua\n"
+	elif(r == 2):
+		return "Contaminacion Aire\n"
+	elif(r == 3):
+		return "Petroleo\n"
+	elif(r == 4):
+		return "Temperatura\n"
+	return "Minerales\n"
 
 func mostrarAguaContaminada():
 	return ContaminacionAgua
