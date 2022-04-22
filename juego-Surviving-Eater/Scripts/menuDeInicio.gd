@@ -11,14 +11,8 @@ func salirDelJuego():
 func _ready():
 	pass # Replace with function body.
 
-
-
-
-
-
-
-
-
 func _on_ButtonInicio_button_up():
 	cargarJuego()
-	
+
+func _on_ButtonSalir_button_up():
+	salirDelJuego()

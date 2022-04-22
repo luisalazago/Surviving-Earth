@@ -7,10 +7,13 @@
 [node name="Mundo" type="Node2D"]
 
 [node name="Ciudad" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -1 )
 
 [node name="DatosMundo" parent="." instance=ExtResource( 2 )]
 
 [node name="Camara" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="Camara"]
+position = Vector2( 511, 294 )
+current = true
 script = ExtResource( 3 )

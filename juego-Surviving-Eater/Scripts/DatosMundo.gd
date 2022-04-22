@@ -3,19 +3,35 @@ extends Node
 signal mensaje
 
 #datos del mundo
-var AguaMundo=200
-var ContaminacionAire=100
-var ContaminacionAgua=100
+var AguaMundo = 200
+var petroleo = 600
+var temperatura = 20
+var minerales = 500
+var ContaminacionAire = 0
+var ContaminacionAgua = 0
 #dato debug hola
 var dato="holamundo"
 
+# Mostrar Datos
 func mostrarDato():
 	emit_signal("mensaje",dato)
 
 func mostrarAguaContaminada():
 	return ContaminacionAgua
-	
-	
+
+func mostrarAireContamiado():
+	return ContaminacionAire
+
+func mostrarPetroleo():
+	return petroleo
+
+func mostrarTemperatura():
+	return temperatura
+
+func mostrarMinerales():
+	return minerales
+
+# Modificar valores datos
 func sacarAgua(n):
 	var result = 0
 	if(n > AguaMundo):

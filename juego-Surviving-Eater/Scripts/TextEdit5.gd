@@ -3,9 +3,9 @@ onready var datos  = get_node("/root/DatosMundo")
 func _init():
 	conectar()
 
-func conectar():	
+func conectar():
 	pass
-	
+
 func _ready():
-	text =  "Contaminacion Agua\n"
-	text += str(datos.mostrarAguaContaminada()) + "%"
+	text =  "Minerales\n"
+	text += str((datos.mostrarMinerales() * 100) / 500) + "%"

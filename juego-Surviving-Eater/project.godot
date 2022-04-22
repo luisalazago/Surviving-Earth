@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="juego_surviving_earth"
-run/main_scene="res://Ecenas/pantalla inicio.tscn"
+run/main_scene="res://Ecenas/pantalla_inicio.tscn"
 config/icon="res://sprites/icon.png"
 
 [autoload]
