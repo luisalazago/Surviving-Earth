@@ -1,9 +1,10 @@
 extends Node
-export(PackedScene) var Mundo
 
 func cargarJuego():
-	get_tree().change_scene_to(Mundo)
-	pass
+	var mundo = load("res://Ecenas/Mundo.tscn")
+	var instancia_mundo = mundo.instance()
+	get_tree().root.add_child(instancia_mundo)
+	queue_free() # free the memory of the system.
 
 func salirDelJuego():
 	get_tree().quit()
@@ -16,7 +17,6 @@ func _on_ButtonInicio_button_up():
 
 func _on_ButtonSalir_button_up():
 	salirDelJuego()
-
 
 func _on_ButtonInicio2_button_up():
 	salirDelJuego()
