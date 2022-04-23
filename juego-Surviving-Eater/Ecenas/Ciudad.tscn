@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/TextEdit.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/DatosPlayer.gd" type="Script" id=2]
-[ext_resource path="res://sprites/edificioDebug.png" type="Texture" id=3]
+[ext_resource path="res://Ecenas/EdificioCentral.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/TextEdit4.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/TextEdit2.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/TextEdit5.gd" type="Script" id=6]
@@ -20,14 +20,7 @@ position = Vector2( -3.99997, 2 )
 scale = Vector2( 3.82617, 3.08696 )
 texture = ExtResource( 8 )
 
-[node name="EdificioCentral" type="Node2D" parent="."]
-position = Vector2( -2, -124 )
-script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="EdificioCentral"]
-position = Vector2( -51.0001, -311 )
-scale = Vector2( 12.0859, 11.6563 )
-texture = ExtResource( 3 )
+[node name="EdificioCentral" parent="." instance=ExtResource( 3 )]
 
 [node name="Camara" type="Node2D" parent="."]
 position = Vector2( 2, 1 )
