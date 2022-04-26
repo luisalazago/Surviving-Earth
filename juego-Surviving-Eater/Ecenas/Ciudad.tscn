@@ -16,11 +16,13 @@
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( -3.99997, 2 )
 scale = Vector2( 3.82617, 3.08696 )
 texture = ExtResource( 8 )
 
 [node name="EdificioCentral" parent="." instance=ExtResource( 3 )]
+position = Vector2( 513, 295 )
 
 [node name="Camara" type="Node2D" parent="."]
 position = Vector2( 2, 1 )
@@ -120,5 +122,10 @@ icon = ExtResource( 9 )
 flat = true
 expand_icon = true
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
 [connection signal="button_up" from="Camara/Camera2D/Salir/ButtonInicio2" to="Camara/Camera2D/Salir" method="_on_ButtonInicio2_button_up"]
 [connection signal="button_up" from="Camara/Camera2D/Inicio/ButtonInicio3" to="Camara/Camera2D/Salir" method="_on_ButtonInicio2_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

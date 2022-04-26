@@ -4,7 +4,10 @@ var contaminacionAgua #(-1..1) -n descontamina +n contamina
 var extraccionAgua  #(0..n)
 var extraccionPetroleo #(0..n)
 var Energia #(-n.. n) -n gasta +n produce 
-var 
+var aumentoAlmaAgua
+var aumentoAlmaEnergia
+var aumentoAlmaPersonas
+
 
 
 
