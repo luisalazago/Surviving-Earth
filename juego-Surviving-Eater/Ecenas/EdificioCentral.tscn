@@ -28,10 +28,10 @@ offset = Vector2( 0, -32 )
 
 [node name="panelControl" type="Panel" parent="."]
 visible = false
-margin_left = 649.0
-margin_top = 116.0
-margin_right = 926.0
-margin_bottom = 476.0
+margin_left = 16.0
+margin_top = -363.0
+margin_right = 293.0
+margin_bottom = -3.0
 script = ExtResource( 4 )
 
 [node name="ButtonMejorar" type="Button" parent="panelControl"]
@@ -39,12 +39,14 @@ margin_left = 109.0
 margin_top = 279.0
 margin_right = 169.0
 margin_bottom = 299.0
+text = "mejorar"
 
 [node name="informacion" type="Label" parent="panelControl"]
 margin_left = 40.0
 margin_top = 21.0
 margin_right = 233.0
 margin_bottom = 237.0
+text = "informacion del edificio"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -53,6 +55,7 @@ margin_left = -16.0
 margin_top = -17.0
 margin_right = 16.0
 margin_bottom = 16.0
+flat = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 2 )
