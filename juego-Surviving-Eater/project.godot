@@ -16,9 +16,7 @@ config/icon="res://sprites/icon.png"
 
 [autoload]
 
-Mundo="*res://Ecenas/Mundo.tscn"
-DatosMundo="*res://Ecenas/DatosMundo.tscn"
-Ciudad="*res://Ecenas/Ciudad.tscn"
+DatosMundo="*res://Scripts/DatosMundo.gd"
 
 [physics]
 
