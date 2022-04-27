@@ -3,12 +3,14 @@ extends Panel
 
 
 func _ready():
+	
 	pass # Replace with function body.
 
 
 
 func activarPanel():
-	pass
+	visible = !visible
+	
 
 func _on_Button_button_down():
 	activarPanel()
