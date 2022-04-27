@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 extends Node
-#DatosDel jugador
 
-
-
-func _init():
-	pass
-=======
-extends Node
 #DatosDel jugador
 var EnergiaAcomulada
 var petroleoAcomulado
@@ -42,14 +34,10 @@ func aumentoPoblacion():
 	var n =rand_range(0,EspacioParaPersonas)
 	Npersonas+=n
 	
-	
-
 func _init():
 	pass
-
 
 func _on_Timer_timeout():
 	#aumentoPoblacion()
 	#personascomiendo()
 	pass # Replace with function body.
->>>>>>> db07218fc90f92e54b90197e6e85e7ce435a7183
