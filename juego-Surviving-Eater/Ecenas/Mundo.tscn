@@ -6,6 +6,6 @@
 [node name="Mundo" type="Node2D"]
 
 [node name="Ciudad" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -1 )
+position = Vector2( 446, 297 )
 
 [node name="DatosMundo" parent="." instance=ExtResource( 2 )]

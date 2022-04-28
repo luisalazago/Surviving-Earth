@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/TextEdit.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/DatosPlayer.gd" type="Script" id=2]
@@ -11,18 +11,10 @@
 [ext_resource path="res://sprites/End.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/menuDeInicio.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/ControladorCamara.gd" type="Script" id=11]
+[ext_resource path="res://Ecenas/edificioDefault.tscn" type="PackedScene" id=12]
 
 [node name="Ciudad" type="Node2D"]
 script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( -3.99997, 2 )
-scale = Vector2( 3.82617, 3.08696 )
-texture = ExtResource( 8 )
-
-[node name="EdificioCentral" parent="." instance=ExtResource( 3 )]
-position = Vector2( 513, 295 )
 
 [node name="Camara" type="Node2D" parent="."]
 position = Vector2( 2, 1 )
@@ -122,9 +114,38 @@ icon = ExtResource( 9 )
 flat = true
 expand_icon = true
 
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( -3.99997, 2 )
+scale = Vector2( 3.82617, 3.08696 )
+texture = ExtResource( 8 )
+
+[node name="EdificioCentral" parent="." instance=ExtResource( 3 )]
+position = Vector2( 513, 295 )
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="nivel 0" type="Node2D" parent="."]
+
+[node name="edificioDefault" parent="nivel 0" instance=ExtResource( 12 )]
+position = Vector2( 440, 292 )
+
+[node name="edificioDefault2" parent="nivel 0" instance=ExtResource( 12 )]
+position = Vector2( 513, 231 )
+
+[node name="edificioDefault3" parent="nivel 0" instance=ExtResource( 12 )]
+position = Vector2( 590, 295 )
+
+[node name="edificioDefault4" parent="nivel 0" instance=ExtResource( 12 )]
+position = Vector2( 513, 368 )
+
+[node name="nivel 1" type="Node2D" parent="."]
+
+[node name="nivel 2" type="Node2D" parent="."]
+
+[node name="nivel 3" type="Node2D" parent="."]
 
 [connection signal="button_up" from="Camara/Camera2D/Salir/ButtonInicio2" to="Camara/Camera2D/Salir" method="_on_ButtonInicio2_button_up"]
 [connection signal="button_up" from="Camara/Camera2D/Inicio/ButtonInicio3" to="Camara/Camera2D/Salir" method="_on_ButtonInicio2_button_up"]
