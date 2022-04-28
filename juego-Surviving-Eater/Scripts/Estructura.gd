@@ -1,22 +1,13 @@
-<<<<<<< HEAD
+#<<<<<<< HEAD
 extends Node2D
+var listaEstructuras = []
+##cargando lista de estructuras
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+#######
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-=======
-extends Node2D
 var contaminacionAire#(-1..1) -n descontamina +n contamina
 var contaminacionAgua #(-1..1) -n descontamina +n contamina
 var extraccionAgua  #(0..n)
@@ -27,15 +18,25 @@ var aumentoAlmaEnergia
 var aumentoAlmaPersonas
 
 
+class estructuras:
+	var contaminacionAire#(-1..1) -n descontamina +n contamina
+	var contaminacionAgua #(-1..1) -n descontamina +n contamina
+	var extraccionAgua  #(0..n)
+	var extraccionPetroleo #(0..n)
+	var Energia #(-n.. n) -n gasta +n produce 
+	var aumentoAlmaAgua
+	var aumentoAlmaEnergia
+	var aumentoAlmaPersonas
+	var animacion
+
+func construir(n):
+	if(listaEstructuras.size()<n):
+		#carga la estructura
+		pass
+	else:
+		#carga estructura default
+		pass
 
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
->>>>>>> db07218fc90f92e54b90197e6e85e7ce435a7183
