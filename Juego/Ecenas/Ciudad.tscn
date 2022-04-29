@@ -21,7 +21,7 @@ position = Vector2( 2, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Camara"]
 position = Vector2( 511, 294 )
-z_index = 1
+z_index = 10
 current = true
 script = ExtResource( 11 )
 
@@ -116,7 +116,6 @@ flat = true
 expand_icon = true
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
 position = Vector2( -3.99997, 2 )
 scale = Vector2( 3.82617, 3.08696 )
 texture = ExtResource( 8 )

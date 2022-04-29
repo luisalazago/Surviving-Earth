@@ -27,7 +27,10 @@ animation = "edificioDefault"
 playing = true
 offset = Vector2( 0, -32 )
 
-[node name="panelControl" type="Panel" parent="."]
+[node name="Panel" type="Node2D" parent="."]
+z_index = 4
+
+[node name="panelControl" type="Panel" parent="Panel"]
 visible = false
 material = SubResource( 3 )
 margin_left = 16.0
@@ -36,14 +39,14 @@ margin_right = 293.0
 margin_bottom = -3.0
 script = ExtResource( 4 )
 
-[node name="ButtonMejorar" type="Button" parent="panelControl"]
+[node name="ButtonMejorar" type="Button" parent="Panel/panelControl"]
 margin_left = 109.0
 margin_top = 279.0
 margin_right = 169.0
 margin_bottom = 299.0
 text = "mejorar"
 
-[node name="informacion" type="Label" parent="panelControl"]
+[node name="informacion" type="Label" parent="Panel/panelControl"]
 margin_left = 40.0
 margin_top = 21.0
 margin_right = 233.0
@@ -62,4 +65,4 @@ flat = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 2 )
 
-[connection signal="button_down" from="StaticBody2D/Button" to="panelControl" method="_on_Button_button_down"]
+[connection signal="button_down" from="StaticBody2D/Button" to="Panel/panelControl" method="_on_Button_button_down"]
