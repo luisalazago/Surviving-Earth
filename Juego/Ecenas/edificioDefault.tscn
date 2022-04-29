@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/guiaEdificios/Edificio debug/edificioDefault0.PNG" type="Texture" id=1]
+[ext_resource path="res://sprites/guiaEdificios/Edificio debug/edificioDefault2.PNG" type="Texture" id=2]
+[ext_resource path="res://Ecenas/PanelDefaultLondra.gd" type="Script" id=3]
+[ext_resource path="res://Ecenas/InfoDefault.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="edificioDefault" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+playing = true
+offset = Vector2( 0, -32 )
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+margin_left = 3.0
+margin_top = -212.0
+margin_right = 186.0
+margin_bottom = -2.0
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 28.0
+margin_top = 3.0
+margin_right = 155.0
+margin_bottom = 17.0
+text = "Información Edificio"
+
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+margin_left = 4.0
+margin_top = 18.0
+margin_right = 179.0
+margin_bottom = 207.0
+script = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="."]
+show_behind_parent = true
+margin_left = -16.0
+margin_top = -17.0
+margin_right = 16.0
+margin_bottom = 15.0
+
+[connection signal="button_down" from="Button" to="Panel" method="_on_Button_button_down"]
