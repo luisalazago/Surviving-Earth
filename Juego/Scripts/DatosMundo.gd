@@ -7,6 +7,7 @@ var AguaMundo = 200
 var petroleo = 600
 var temperatura = 20
 var minerales = 500
+var basura=5000
 var ContaminacionAire = 0
 var ContaminacionAgua = 0
 #dato debug hola
