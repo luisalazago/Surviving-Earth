@@ -5,12 +5,12 @@ var EnergiaAcomulada = 100
 var petroleoAcomulado = 50
 var aguaAcomulada = 100
 var comidaAlmacenada = 100
-var maxEnergia
-var maxPetroleo
-var maxAgua
-var maxComida
+var maxEnergia=30
+var maxPetroleo=50
+var maxAgua=20
+var maxComida =10
 var Npersonas = 330
-var EspacioParaPersonas
+var EspacioParaPersonas=100
 var ReciclajeTotal = 100
 const cantEd = 5
 
@@ -47,13 +47,13 @@ func personascomiendo():
 		aguaAcomulada=n
 		
 func aumentoPoblacion():
-	var n =rand_range(0,EspacioParaPersonas)
-	Npersonas+=n
+	var n = rand_range(0,int(EspacioParaPersonas/2))
+	Npersonas  += n
 	
 func _init():
 	pass
 
 func _on_Timer_timeout():
-	#aumentoPoblacion()
-	#personascomiendo()
+	aumentoPoblacion()
+	personascomiendo()
 	pass # Replace with function body.
