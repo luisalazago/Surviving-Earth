@@ -19,10 +19,9 @@ visible = false
 position = Vector2( 52, 55 )
 scale = Vector2( 2, 2 )
 
+[node name="carrito" parent="." instance=ExtResource( 5 )]
+
 [node name="Ciudad" parent="." instance=ExtResource( 1 )]
 z_index = 4
-
-[node name="carrito" parent="Ciudad" instance=ExtResource( 5 )]
-position = Vector2( 654, 223 )
 
 [node name="DatosMundo" parent="." instance=ExtResource( 2 )]

@@ -3,10 +3,12 @@ export (int) var speed = 200
 
 var target = Vector2()
 var velocity = Vector2()
-
+var seleccion = false
 func _input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("click") and seleccion:
 		target = get_global_mouse_position()
+	
+	
 
 func _physics_process(delta):
 	velocity = position.direction_to(target) * speed
@@ -14,14 +16,5 @@ func _physics_process(delta):
 	if position.distance_to(target) > 5:
 		velocity = move_and_slide(velocity)
 
-
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Button_button_down():
+	seleccion = !seleccion

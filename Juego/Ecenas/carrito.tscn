@@ -1,9 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Ecenas/movimientocarrito.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/carro default.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
+radius = 24.0
+height = 54.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -19,9 +21,20 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -4, -3 )
+rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
-position = Vector2( 9.53674e-07, 0.5 )
-scale = Vector2( 0.3125, 0.515625 )
+position = Vector2( -6, -4.5 )
+scale = Vector2( 0.224609, 0.201172 )
 frames = SubResource( 2 )
+
+[node name="Button" type="Button" parent="KinematicBody2D"]
+margin_left = -37.0
+margin_top = -27.0
+margin_right = 32.0
+margin_bottom = 23.0
+flat = true
+
+[connection signal="button_down" from="KinematicBody2D/Button" to="KinematicBody2D" method="_on_Button_button_down"]
