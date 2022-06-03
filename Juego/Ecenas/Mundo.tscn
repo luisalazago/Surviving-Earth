@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Ecenas/Ciudad.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ecenas/DatosMundo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Ciudad Kosomeen.png" type="Texture" id=3]
 [ext_resource path="res://Ecenas/Londra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Ecenas/carrito.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mapa default.png" type="Texture" id=6]
 
 [node name="Mundo" type="Node2D"]
 
@@ -22,6 +23,10 @@ scale = Vector2( 2, 2 )
 [node name="carrito" parent="." instance=ExtResource( 5 )]
 
 [node name="Ciudad" parent="." instance=ExtResource( 1 )]
+position = Vector2( 377, 29 )
 z_index = 4
 
 [node name="DatosMundo" parent="." instance=ExtResource( 2 )]
+
+[node name="mapa default" type="Sprite" parent="."]
+texture = ExtResource( 6 )

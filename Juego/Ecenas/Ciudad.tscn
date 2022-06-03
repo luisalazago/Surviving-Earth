@@ -31,7 +31,7 @@ margin_top = -298.0
 margin_right = 513.0
 margin_bottom = -231.0
 
-[node name="TextEdit" type="TextEdit" parent="Camara/Camera2D/PanelDatos"]
+[node name="TextEditcontaminacion" type="TextEdit" parent="Camara/Camera2D/PanelDatos"]
 margin_left = 6.0
 margin_top = 12.0
 margin_right = 157.0
@@ -91,6 +91,54 @@ text = "contaminacion
 readonly = true
 script = ExtResource( 6 )
 
+[node name="TextEdit6" type="TextEdit" parent="Camara/Camera2D/PanelDatos"]
+margin_left = 7.0
+margin_top = 82.0
+margin_right = 158.0
+margin_bottom = 127.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "contaminacion
+0%"
+readonly = true
+script = ExtResource( 1 )
+
+[node name="TextEdit7" type="TextEdit" parent="Camara/Camera2D/PanelDatos"]
+margin_left = 7.0
+margin_top = 140.0
+margin_right = 158.0
+margin_bottom = 185.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "contaminacion
+0%"
+readonly = true
+script = ExtResource( 1 )
+
+[node name="TextEdit8" type="TextEdit" parent="Camara/Camera2D/PanelDatos"]
+margin_left = 8.0
+margin_top = 194.0
+margin_right = 159.0
+margin_bottom = 239.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "contaminacion
+0%"
+readonly = true
+script = ExtResource( 1 )
+
+[node name="TextEdit9" type="TextEdit" parent="Camara/Camera2D/PanelDatos"]
+margin_left = 8.0
+margin_top = 249.0
+margin_right = 159.0
+margin_bottom = 294.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "contaminacion
+0%"
+readonly = true
+script = ExtResource( 1 )
+
 [node name="Salir" type="Node2D" parent="Camara/Camera2D"]
 position = Vector2( -513, -295 )
 script = ExtResource( 10 )
@@ -132,7 +180,7 @@ autostart = true
 [node name="nivel 0" type="Node2D" parent="."]
 
 [node name="edificioDefault" parent="nivel 0" instance=ExtResource( 12 )]
-position = Vector2( 300, 303 )
+position = Vector2( 298, 346 )
 
 [node name="edificioDefault2" parent="nivel 0" instance=ExtResource( 12 )]
 position = Vector2( 326, 178 )
