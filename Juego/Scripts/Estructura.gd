@@ -65,7 +65,7 @@ func construir(n):
 	if(listaEstructuras.size()>=n):
 		n=0
 	var dato = listaEstructuras[n]
-	if(listaEstructuras[n].)
+	#if(listaEstructuras[n]
 	emit_signal("cambiarAnimacion",dato.animacion)
 	
 
@@ -76,6 +76,7 @@ func construir(n):
 
 
 func funcionamientoedificio():
+	pass
 	
 
 func _on_construir_0_button_down():
