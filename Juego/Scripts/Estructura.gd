@@ -55,7 +55,7 @@ class estructuras:
 
 
 signal cambiarAnimacion(nombre)
-
+	
 
 func _init():
 	cargarListaEstructuras()

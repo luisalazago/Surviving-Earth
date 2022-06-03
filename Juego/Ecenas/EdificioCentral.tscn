@@ -49,6 +49,13 @@ margin_right = 169.0
 margin_bottom = 299.0
 text = "mejorar"
 
+[node name="crearCarrito" type="Button" parent="Panel/panelControl"]
+margin_left = 33.0
+margin_top = 280.0
+margin_right = 95.0
+margin_bottom = 300.0
+text = "carrito"
+
 [node name="informacion" type="Label" parent="Panel/panelControl"]
 margin_left = 40.0
 margin_top = 21.0
@@ -59,6 +66,7 @@ text = "Información del Edificio"
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Button" type="Button" parent="StaticBody2D"]
+visible = false
 margin_left = -48.0
 margin_top = -46.0
 margin_right = 45.0
@@ -68,4 +76,6 @@ flat = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 2 )
 
+[connection signal="button_down" from="Panel/panelControl/ButtonMejorar" to="." method="_on_ButtonMejorar_button_down"]
+[connection signal="button_down" from="Panel/panelControl/crearCarrito" to="." method="_on_ButtonMejorar_button_down"]
 [connection signal="button_down" from="StaticBody2D/Button" to="Panel/panelControl" method="_on_Button_button_down"]

@@ -8,6 +8,6 @@ func _ready():
 	text = "Consumo de Energia: " + str(datos.mostrarEnergia()) + "\n"
 	text += "Consumo de Agua: " + str(datos.mostrarAgua()) + "\n"
 	text += "Población albergada: " + str(datos.mostrarPoblacion()) + "\n"
-	text += "Reciclaje producido: " + str(datos.mostrarReciclaje()) + "\n"
+	#text += "Reciclaje producido: " + str(datos.mostrarReciclaje()) + "\n"
 	
 	
