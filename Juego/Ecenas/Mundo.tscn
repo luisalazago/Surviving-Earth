@@ -1,32 +1,45 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Ecenas/Ciudad.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ecenas/DatosMundo.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/Ciudad Kosomeen.png" type="Texture" id=3]
+[ext_resource path="res://Ecenas/Landbou.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Ecenas/Londra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Ecenas/carrito.tscn" type="PackedScene" id=5]
-[ext_resource path="res://mapa default.png" type="Texture" id=6]
+[ext_resource path="res://Ecenas/Mapa Capa 2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Ecenas/Kosomeen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Ecenas/Chang.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ecenas/Mapa Global.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Ecenas/Mapa Capa 3.tscn" type="PackedScene" id=10]
 
 [node name="Mundo" type="Node2D"]
 
-[node name="CiudadKosomeen" type="Sprite" parent="."]
-visible = false
-position = Vector2( 909, 660 )
-scale = Vector2( 1.54102, 1.47418 )
-texture = ExtResource( 3 )
-
-[node name="Node2D2" parent="." instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 52, 55 )
-scale = Vector2( 2, 2 )
+[node name="Londra" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3500, -2700 )
+scale = Vector2( 2.5, 2.5 )
 
 [node name="carrito" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [node name="Ciudad" parent="." instance=ExtResource( 1 )]
-position = Vector2( 377, 29 )
+position = Vector2( 1520, -1257 )
 z_index = 4
 
 [node name="DatosMundo" parent="." instance=ExtResource( 2 )]
 
-[node name="mapa default" type="Sprite" parent="."]
-texture = ExtResource( 6 )
+[node name="Landbou" parent="." instance=ExtResource( 3 )]
+position = Vector2( 700, 700 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Mapa Global" parent="." instance=ExtResource( 9 )]
+
+[node name="Kosomeen" parent="." instance=ExtResource( 7 )]
+position = Vector2( -3500, 400 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Chang" parent="." instance=ExtResource( 8 )]
+position = Vector2( 150, -2600 )
+scale = Vector2( 3, 3 )
+
+[node name="Mapa Capa 2" parent="." instance=ExtResource( 6 )]
+
+[node name="Mapa Capa 3" parent="." instance=ExtResource( 10 )]
